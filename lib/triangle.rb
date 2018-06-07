@@ -1,5 +1,5 @@
 class Triangle
-  attr_accessor :type, :length_1, :length_2, :length_3, :equilateral, :scalene, :isosceles
+  attr_accessor :length_1, :length_2, :length_3, :equilateral, :scalene, :isosceles
 
   def initialize(length_1, length_2,length_3)
     @length_1 = length_1;
@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if @length_1 != 0 && @length_2 != 0 && @length_3 != 0 &&
+    if @length_1 > 0 && @length_2 > 0 && @length_3 > 0
       equilateral = @length_1 == @length_2 && @length_2 == @length_3;
       scalene = @length_1 != @length_2 && @length_2 != @length_3 && @length_1 != @length_3;
       isosceles = (@length_1 == @length_2 && @length_1 != @length_3) ||
