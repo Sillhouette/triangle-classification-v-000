@@ -9,8 +9,8 @@ class Triangle
 
   def kind
     if @length_1 != 0 && @length_2 != 0 && @length_3 != 0 &&
-      equilateral = @length_1 == @length_2 == @length_3;
-      scalene = @length_1 != @length_2 != @length_3;
+      equilateral = @length_1 == @length_2 && @length_2 == @length_3;
+      scalene = @length_1 != @length_2 && @length_2 != @length_3 && @length_1 != @length_3;
       isosceles = (@length_1 == @length_2 && @length_1 != @length_3) ||
                   (@length_1 == @length_3 && @length_1 != @length_2) ||
                   (@length_2 == @length_3 && @length_1 != @length_2);
@@ -30,7 +30,7 @@ class Triangle
     end
   end
 
-  class TriangleError
+  class TriangleError < StandardError
     def message
       "The given lengths are now a valid triangle."
     end
