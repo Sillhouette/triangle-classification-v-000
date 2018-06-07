@@ -17,7 +17,7 @@ class Triangle
                           @length_1 + @length_3 > @length_2 ||
                           @length_2 + @length_3 > @length_1;
 
-    if @length_1 > 0 && @length_2 > 0 && @length_3 > 0 && triangle_inequality
+    if (@length_1 > 0 && @length_2 > 0 && @length_3 > 0) && triangle_inequality
       if a_and_b && b_and_c
         :equilateral
       elsif !a_and_b && !a_and_c && !b_and_c
