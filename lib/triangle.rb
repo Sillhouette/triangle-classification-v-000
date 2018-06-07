@@ -9,8 +9,8 @@ class Triangle
 
   def kind
 
-    a_and_b? = @length_1 && @length_2
-    a_and_c? = @length_1 && @length_3
+    a_and_b? = @length_1 == @length_2
+    a_and_c? = @length_1 == @length_3
     b_and_c? = @length_2 && @length_3
 
     triangle_inequality? = @length_1 + @length_2 > @length_3 ||
