@@ -19,7 +19,7 @@ class Triangle
 
     if @length_1 > 0 && @length_2 > 0 && @length_3 > 0 && triangle_inequality
       if a_and_b && b_and_c
-        @equilateral
+        :equilateral
       elsif !a_and_b && !a_and_c && !b_and_c
         @scalene
       elsif (a_and_b && !a_and_c) ||
