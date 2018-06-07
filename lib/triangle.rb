@@ -15,7 +15,7 @@ class Triangle
     a_and_c = @length_1 == @length_3
     b_and_c = @length_2 == @length_3
 
-    triangle_inequality = @length_1 + @length_2 > @length_3 ||
+    triangle_inequality = (@length_1 + @length_2) > @length_3 ||
                           @length_1 + @length_3 > @length_2 ||
                           @length_2 + @length_3 > @length_1;
     check_length_validity = @length_1 <= 0 || @length_2 <= 0 || @length_3 <= 0;
