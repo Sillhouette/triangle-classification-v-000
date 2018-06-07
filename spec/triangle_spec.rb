@@ -1,4 +1,4 @@
-include "pry"
+require "pry"
 
 describe 'Triangle' do
 
