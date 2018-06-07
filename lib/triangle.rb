@@ -21,7 +21,6 @@ class Triangle
     check_length_validity = @length_1 <= 0 || @length_2 <= 0 || @length_3 <= 0;
 
     if (check_length_validity) && !triangle_inequality
-      binding.pry
       raise TriangleError
     else
       if a_and_b && b_and_c
