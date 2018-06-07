@@ -16,8 +16,8 @@ class Triangle
     b_and_c = @length_2 == @length_3
     puts "second check is #{a_and_b} and #{a_and_c} and #{b_and_c}"
 
-    triangle_inequality = (@length_1 + @length_2) > @length_3 ||
-                          (@length_1 + @length_3) > @length_2 ||
+    triangle_inequality = (@length_1 + @length_2) > @length_3 &&
+                          (@length_1 + @length_3) > @length_2 &&
                           (@length_2 + @length_3) > @length_1;
 
     puts "third check is #{triangle_inequality}"
