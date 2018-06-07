@@ -17,7 +17,7 @@ class Triangle
                           @length_1 + @length_3 > @length_2 ||
                           @length_2 + @length_3 > @length_1;
 
-    if !(@length_1 > 0 && @length_2 > 0 && @length_3 > 0) && triangle_inequality
+    if !(@length_1 >= 0 && @length_2 >= 0 && @length_3 >= 0) && triangle_inequality
       begin
         raise TriangleError
       rescue TriangleError => error
