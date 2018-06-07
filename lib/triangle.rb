@@ -21,11 +21,11 @@ class Triangle
       if a_and_b && b_and_c
         :equilateral
       elsif !a_and_b && !a_and_c && !b_and_c
-        @scalene
+        :scalene
       elsif (a_and_b && !a_and_c) ||
             (a_and_c && !a_and_b) ||
             (b_and_c && !a_and_b)
-        @isosceles
+        :isosceles
       else
         begin
           raise TriangleError
