@@ -31,13 +31,7 @@ class Triangle
       elsif (a_and_b && !a_and_c) ||
             (a_and_c && !a_and_b) ||
             (b_and_c && !a_and_b)
-        :isoscele
-      end
-    else
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message;
+        :isosceles
       end
     end
   end
