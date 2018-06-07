@@ -18,11 +18,7 @@ class Triangle
                           @length_2 + @length_3 > @length_1;
 
     if (@length_1 <= 0 || @length_2 <= 0 || @length_3 <= 0) && !triangle_inequality
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.message;
-      end
+      raise TriangleError
     else
       if a_and_b && b_and_c
         :equilateral
