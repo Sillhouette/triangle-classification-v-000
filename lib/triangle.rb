@@ -10,6 +10,7 @@ class Triangle
   def kind
 
     a_and_b = @length_1 == @length_2
+    puts a_and_b;
     a_and_c = @length_1 == @length_3
     b_and_c = @length_2 == @length_3
 
