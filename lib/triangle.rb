@@ -23,8 +23,8 @@ class Triangle
     puts "third check is #{triangle_inequality}"
     check_length_validity = @length_1 <= 0 || @length_2 <= 0 || @length_3 <= 0;
     puts "fourth check is #{check_length_validity}"
-    
-    if (check_length_validity) && !triangle_inequality
+
+    if (check_length_validity) || !triangle_inequality
       raise TriangleError
     else
       if a_and_b && b_and_c
