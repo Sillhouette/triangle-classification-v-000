@@ -18,9 +18,9 @@ class Triangle
                           (@length_1 + @length_3) > @length_2 &&
                           (@length_2 + @length_3) > @length_1;
 
-    check_length_validity = @length_1 <= 0 || @length_2 <= 0 || @length_3 <= 0;
+    check_length_invalidity = @length_1 <= 0 || @length_2 <= 0 || @length_3 <= 0;
 
-    if (check_length_validity) || !triangle_inequality
+    if (check_length_invalidity) || !triangle_inequality
       raise TriangleError
     else
       if a_and_b && b_and_c
