@@ -10,7 +10,6 @@ class Triangle
   def kind
 
     a_and_b = @length_1 == @length_2
-    puts a_and_b;
     a_and_c = @length_1 == @length_3
     b_and_c = @length_2 == @length_3
 
@@ -19,16 +18,13 @@ class Triangle
                           @length_2 + @length_3 > @length_1;
 
     if @length_1 > 0 && @length_2 > 0 && @length_3 > 0 && triangle_inequality
-      equilateral = a_and_b && b_and_c;
-      scalene = !a_and_b && !a_and_c && !b_and_c;
-      isosceles = (a_and_b && !a_and_c) ||
-                  (a_and_c && !a_and_b) ||
-                  (b_and_c && !a_and_b);
-      if equilateral
+      if a_and_b && b_and_c
         @equilateral
-      elsif scalene
+      elsif !a_and_b && !a_and_c && !b_and_c
         @scalene
-      elsif isosceles
+      elsif (a_and_b && !a_and_c) ||
+            (a_and_c && !a_and_b) ||
+            (b_and_c && !a_and_b)
         @isosceles
       else
         begin
