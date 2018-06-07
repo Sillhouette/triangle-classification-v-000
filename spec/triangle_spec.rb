@@ -47,8 +47,7 @@ describe 'Triangle' do
   end
 
   it 'knows that triangles with negative sides are illegal' do
-    binding.pry
-    expect{Triangle.new(3, 4, -5).kind}.to raise_error(Triangle::TriangleError)
+    expect{Triangle.new(3, 4, -5).kind}.to binding.pry raise_error(Triangle::TriangleError)
   end
 
   it 'knows that triangles violating triangle inequality are illegal' do
