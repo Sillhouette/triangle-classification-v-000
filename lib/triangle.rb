@@ -30,6 +30,7 @@ class Triangle
       elsif isosceles
         @isosceles
       else
+      else
         begin
           raise TriangleError
         rescue TriangleError => error
