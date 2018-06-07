@@ -15,11 +15,11 @@ class Triangle
     a_and_c = @length_1 == @length_3
     b_and_c = @length_2 == @length_3
     puts "second check is #{a_and_b} and #{a_and_c} and #{b_and_c}"
-    
+
     triangle_inequality = (@length_1 + @length_2) > @length_3 ||
                           @length_1 + @length_3 > @length_2 ||
                           @length_2 + @length_3 > @length_1;
-                          
+
     puts "third check is #{triangle_inequality}"
     check_length_validity = @length_1 <= 0 || @length_2 <= 0 || @length_3 <= 0;
     puts "fourth check is #{check_length_validity}"
